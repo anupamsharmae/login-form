@@ -1,91 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <title>Login</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="css/bootstrap.min.css"/>
-      <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet"> 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"/>
-      <link rel="stylesheet" href="css/style.css"/>
-    </head>
-    <body>
-     <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login-modal">Login</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signup-modal">Sign Up</button>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-<!-- Modal -->
-<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="login-modalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-         
-        </button>
-      </div>
-     
-      <div class="modal-body">
-        <h2 class="text-center">LogIn</h2>
-        <div class="form-group">
-            <label class="h6 mt-4"for="InputEmail1">Email :</label>
-            <input type="email" class="form-control " id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required="required">
-            <label class="h6 mt-4" for="InputPassword1">Password :</label>
-            <input type="password" class="form-control" id="InputPassword1" placeholder="Password"  required="required" >
-            <h6 class="mt-3"><a href="#">Forgot Password</a></h6>
+    <section>
+        <div id="loader1" class="bubble"></div>
+
+        <div id="signup_container" class="container">
+            <h2>SignUp</h2>
+            <form action="" class="form-class">
+                <div class="form-group">  
+                    <input type="text" name="uname"  id="fname" class="user-textfield" required>
+                    <label for="uname" id="fname_label" class="user_label">Full Name</label>
+                    <p id="name_caption"></p>
+                </div>
+
+                <div class="form-group">  
+                    <input type="email" name="uname"  id="r_username" class="user-textfield" required>
+                    <label for="uname" id="r_username_label" class="user_label">Username</label>
+                    <p id="r_user_caption"></p>
+                </div>
+               
+                <div class="form-group">
+                    <input type="password" name="passwrd" class="password-textfield" id="r_password" required>
+                    <label for="passwrd" id="r_password_label" class="password_label">Password</label>
+                    <p id="r_password_caption"></p>
+                </div>
+                <div class="form-group">
+                    <input type="password" name="passwrd" class="password-textfield" id="c_password" required>
+                    <label for="passwrd" id="c_password_label" class="password_label">Confirm Password</label>
+                    <p id="confirm_caption"></p>
+                </div>
+               
+               
+                <input type="button" value="Register" class="btn">
+                <p class="footer">Already have an account? Just <a id="login_link" href="#">LogIn</a> here</p>
+            </form>
         </div>
-        <div class="form-check form-check-inline mt-4 mb-3">
-          <input class="form-check-input" type="checkbox" id="terms" value="agree" required="required">
-          <label class="form-check-label h6" for="terms">Remember me</label>
+
+
+
+
+
+
+
+
+        <div id="loader2" class=""></div>
+        <div id="login_container" class="container ">
+            <h2>LogIn</h2>
+            <form action="" class="form-class">
+                <div class="form-group">  
+                    <input type="email" name="uname"  id="username" class="user-textfield" required>
+                    <label for="uname" id="user" class="user_label">Username</label>
+                    <p id="user_caption"></p>
+                </div>
+               
+                <div class="form-group">
+                    <input type="password" name="passwrd" class="password-textfield" id="password" required>
+                    <label for="passwrd" id="password_label" class="password_label">Password</label>
+                    <p id="password_caption"></p>
+                </div>
+                <a class="forget_label" href="#">Forget Password</a>
+                
+                <div class="chkbox">
+                    <input type="checkbox" name="login" id="login_chkbox">
+                    <label for="login_chkbox">Remember me</label>    
+                </div>
+               
+                <input type="button" value="Submit" class="btn">
+                <p class="footer">Don't have an account? Dont' Worry <a id="signup_link" href="#">Register</a> here</p>
+            </form>
         </div>
-        
-        <button type="submit" class="btn-lg btn btn-primary btn-block mb-5">Submit</button>
-        <h6 class="text-center mb-0">Don't have an account? Dont' Worry <a href="#"data-dismiss="modal" data-toggle="modal" data-target="#signup-modal">Register</a> here</h6>  
-      </div>
-      </div>
-  </div>
-</div>
 
-<!-- Modal -->
-<div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="login-modalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header border-bottom-0">
-        
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-         
-        </button>
-      </div>
-     
-      <div class="modal-body">
-        <h2 class="text-center mb-0">SignUp</h2>
-        <div class="form-group">
-          <label class="h6 mt-4" for="name">Name :</label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" required="required">
-          <label class="h6 mt-4" for="login-mail">Phone :</label>
-          <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter Phone" required="required" minlength="10" maxlength="10">
-          <label class="h6 mt-4" for="login-mail">Email :</label>
-          <input type="email" class="form-control" id="signup-mail" name="signup-mail" placeholder="Enter Email" required="required">
-          <label class="h6 mt-4" for="login-pass">Password : (Minimum length 6)</label>
-          <input type="password" class="form-control" id="signup-pass" name="signup-pass" placeholder="Set Password" required="required" minlength="6">
-          <label class="h6 mt-4" for="login-pass">Confirm Password :</label>
-          <input type="password" class="form-control" id="confirm-pass" name="confirm-pass" placeholder="Confirm Password" required="required" minlength="6">
-      </div>
-      <div class="form-check form-check-inline mt-5">
-        <input class="form-check-input" type="checkbox" id="terms" value="agree" required="required">
-        <label class="form-check-label h6" for="terms">Agree Terms & Conditions</label>
-      </div>
-        <button type="submit" class=" text-center btn-lg btn btn-primary btn-block my-4 px-5">Submit</button>
-        <h6 class="text-center mt-4">Already have an account? <a href="#" data-toggle="modal" data-target="#login-modal" data-dismiss="modal">Login</a> here</h6>  
-      </div>
-      </div>
-  </div>
-</div>
+    </section>
 
-
-    <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+  
+    <script src="js/main.js"></script>
+</body>
 </html>

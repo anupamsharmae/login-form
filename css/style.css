@@ -1,21 +1,231 @@
-body {
-    margin: 0;
+/*--chery red = #c20912
+rgba(0, 0, 0, 0.2
+*/
+
+body{
     padding: 0;
-    font: 20px 'Baloo Paaji 2','cursive';
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.modal-body{
-    background-image: url('../images/wave1.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-   background-size: cover;
-    padding:0 50px 50px 50px;
+
+
+.container{
+    position: relative;
+    display: none;
+    background-color: #ffffff;
+    max-width: 20rem;
+    margin:5rem auto;
+    border-radius:0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 60px 10px;
+    transition: 0.3s ease-in-out;
+}  
+.active{
+    display: block;
 }
-.form-group{
+
+
+h2{
+    text-align: center;
+    padding-top: 2rem ;
     margin: auto;
 }
-.form-control{
-    height: 50px;
+.form-class{
+    padding: 0.5rem;
+   
 }
-a:hover{
+.form-group{
+    position: relative;
+    margin:2rem 1rem;
+}
+.user_label, .password_label{
+    position:absolute;
+    left: 0.8rem;
+    top: 0rem;
+    color: #aaa;
+    transform: translateY(50%);
+    padding:0.1rem 0.4rem;
+    cursor: text;
+    transition: 0.3s ease-in-out;
+}
+
+.user-textfield, .password-textfield{
+    border: 1px solid #bbbbbb;
+    padding:0.8rem;
+    border-radius:0.4rem;
+    font-size: 1.2rem;
+    width: 90%;
+    outline: none;
+}
+
+
+.user-textfield:focus + .user_label, .password-textfield:focus + .password_label, .hastext{
+    top: -1.2rem;
+    font-size: 0.9rem;
+    background-color: #fff;
+}
+
+.invalid{
+    border: 1px solid #ff0000;
+}
+.invalid_text{
+    color: #ff0000;
+}
+
+#user_caption, #password_caption, #name_caption, #r_user_caption, #r_password_caption, #confirm_caption{
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #ff0000;
+}
+.forget_label{
+    margin:2rem 1rem;
     text-decoration: none;
+    color: #096cff;
 }
+.chkbox{
+    margin:1rem;
+    
+}
+.chkbox label{
+    cursor: pointer;
+}
+
+.btn{
+    border: none;
+    background-color: #096cff;
+    color: #ffffff;
+    width: 90%;
+    padding: 1rem;
+    margin:0 1rem 1rem 1rem;
+    font-size: 1rem;
+    border-radius:0.4rem;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.btn:hover{background-color: #3b89ff;}
+.btn:active{background-color: #0953c2;}
+.footer{
+    margin: 1rem 2rem;
+    font-size: 0.8rem;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #096cff;
+}
+
+
+
+section{
+    height: 100vh;
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.bubble{
+    position: absolute;
+    border-radius:50%;
+    background-color:  #096cff;
+    bottom: -20%;
+    left: -15%;
+    height: 10rem;
+    width: 10rem;
+    z-index: 1;
+    animation: was 2.2s linear 1;
+}
+@keyframes was{
+    from{
+       transform: scale(0);
+    }
+    50%{
+        transform: scale(25);
+    }
+    to{
+        transform: scale(0);
+    }
+    
+}
+
+/* .wave{
+    position: absolute;
+    border-radius:50%;
+    background-color: #0953c2;
+    bottom: -100%;
+    left: -50%;
+    height: 10rem;
+    width: 10rem;
+    z-index: 1;
+    animation: wavees 5s linear 1;
+}
+@keyframes wavees{
+    from{
+        bottom: -100%;
+        left: -50%;
+        height: 10rem;
+        width: 10rem;
+    }
+    to{
+       bottom: 100%;
+       height: 200rem;
+       width: 200rem;
+       left: 100%;
+    }
+    
+}
+
+.wave::before{
+    position: absolute;
+    content: "";
+    height: 20rem;
+    width: 20rem;
+    bottom: -100%;
+    left: -50%;
+    border-radius:50%;
+    background-color: #0953c2;
+    opacity: 0.8;
+    animation: wavee 5s linear 1;
+}
+@keyframes wavee{
+    from{
+        bottom: -120%;
+        left: -150%;
+        height: 50rem;
+        width: 50rem;
+    }
+    to{
+       bottom: 100%;
+       height: 100rem;
+       width: 100rem;
+       left: 100%;
+    }
+    
+}
+.wave::after{
+    position: absolute;
+    content: "";
+    height: 20rem;
+    width: 20rem;
+    bottom: -100%;
+    left: -50%;
+    border-radius:50%;
+    background-color: #0953c2;
+    opacity: 0.6;
+    animation: waves 5s linear 1;
+}
+
+
+@keyframes waves{
+    from{
+        bottom: -80%;
+        left: -80%;
+        height: 10rem;
+        width: 10rem;
+    }
+    to{
+       bottom: 100%;
+       height: 200rem;
+       width: 200rem;
+       left: 100%;
+    }
+    
+} */
