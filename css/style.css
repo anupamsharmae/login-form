@@ -6,6 +6,7 @@ body{
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 
@@ -16,9 +17,33 @@ body{
     max-width: 20rem;
     margin:5rem auto;
     border-radius:0.4rem;
+    overflow: inherit;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 60px 10px;
     transition: 0.3s ease-in-out;
-}  
+}
+.popup{
+    display: none;
+    position: absolute;
+    height: auto;
+    width: 90%;
+    background-color: #ffffff;
+    max-width: 30rem;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    border-radius:0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 60px 1000px;
+    transition: 0.3s ease-in-out;
+} 
+.popup p{
+    text-align: center;
+    padding-top: 2.5rem; 
+    font-size: 1.5rem;
+}
+.popup #ok{
+    margin:5%;
+} 
 .active{
     display: block;
 }
@@ -55,6 +80,7 @@ h2{
     font-size: 1.2rem;
     width: 90%;
     outline: none;
+    background-color: transparent !important;
 }
 
 
@@ -117,6 +143,7 @@ h2{
 
 section{
     height: 100vh;
+    min-height: 700px;
     background-color: #ffffff;
     position: relative;
     overflow: hidden;
@@ -126,10 +153,11 @@ section{
     position: absolute;
     border-radius:50%;
     background-color:  #096cff;
-    bottom: -20%;
-    left: -15%;
+    bottom: 0;
+    left: -20rem;
     height: 10rem;
     width: 10rem;
+    
     z-index: 1;
     animation: was 2.2s linear 1;
 }
@@ -138,6 +166,7 @@ section{
        transform: scale(0);
     }
     50%{
+        
         transform: scale(25);
     }
     to{
